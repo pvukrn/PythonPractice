@@ -1,28 +1,29 @@
-# 1.	Data Types:
+# Day 1
+1.	Data Types:
 ### Numeric Types:
-•	int: Integer values, e.g., 42
-•	float: Floating-point values, e.g., 3.14
-•	complex: Complex numbers, e.g., 3+4j
+- int: Integer values, e.g., 42
+- float: Floating-point values, e.g., 3.14
+- complex: Complex numbers, e.g., 3+4j
 ### Sequence Types:
-•	str: String, a sequence of characters, e.g., "Hello, World!"
-•	list: Ordered, mutable collection, e.g., [1, 2, 3, 4]
-•	tuple: Ordered, immutable collection, e.g., (1, 2, 3, 4)
+- str: String, a sequence of characters, e.g., "Hello, World!"
+- list: Ordered, mutable collection, e.g., [1, 2, 3, 4]
+- tuple: Ordered, immutable collection, e.g., (1, 2, 3, 4)
 ### Mapping Type:
-•	dict: Collection of key-value pairs, e.g., {"name": "Alice", "age": 25}
+- dict: Collection of key-value pairs, e.g., {"name": "Alice", "age": 25}
 ### Set Types:
-•	set: Unordered collection of unique elements, e.g., {1, 2, 3}
-•	frozenset: Immutable version of a set, e.g., frozenset([1, 2, 3])
+- set: Unordered collection of unique elements, e.g., {1, 2, 3}
+- frozenset: Immutable version of a set, e.g., frozenset([1, 2, 3])
 ### Boolean Type:
-•	bool: Boolean values, True or False
+- bool: Boolean values, True or False
 ### Binary Types:
-•	bytes: Immutable sequence of bytes, e.g., b'hello'
-•	bytearray: Mutable sequence of bytes, e.g., bytearray(b'hello')
-•	memoryview: Allows memory access without copying, e.g., memoryview(b'hello')
+- bytes: Immutable sequence of bytes, e.g., b'hello'
+- bytearray: Mutable sequence of bytes, e.g., bytearray(b'hello')
+- memoryview: Allows memory access without copying, e.g., memoryview(b'hello')
 ### None Type:
-•	NoneType: Represents the absence of a value, e.g., None
+- NoneType: Represents the absence of a value, e.g., None
 ### Mutable vs Immutable Types
-•	Mutable: Objects that can be changed after creation. Examples: list, dict, set
-•	Immutable: Objects that cannot be changed after creation. Examples: int, float, str, tuple
+- Mutable: Objects that can be changed after creation. Examples: list, dict, set
+- Immutable: Objects that cannot be changed after creation. Examples: int, float, str, tuple
 Understanding this distinction is crucial, as it affects how data is passed around in your programs and how efficiently your code runs.
 ### Type Hints and Annotations
 Type hints provide a way to specify the expected data types of function arguments and return values. This is especially useful for improving code readability and for tools like linters and IDEs to provide better support.
@@ -81,15 +82,14 @@ Time complexity essentially measures how the runtime of an algorithm scales with
 5.	Quadratic Time (O(n^2)): The runtime increases quadratically with the size of the input. Example: nested loops, such as checking all pairs in a list.
 6.	Exponential Time (O(2^n)): The runtime doubles with each addition to the input size. Example: solving the Fibonacci sequence recursively without memorization.
 ### Implementation of dict and set: 
-cpython/Objects/dictobject.c at main · python/cpython, 
-cpython/Objects/setobject.c at main · python/cpython
+- cpython/Objects/dictobject.c at main · python/cpython
+- cpython/Objects/setobject.c at main · python/cpython
 ## Mutability and Immutability from Memory angle: 
-Mutable objects are objects that can be modified after creation without changing their identity. Examples: list, dict, set. In memory, when you modify a mutable object, the object retains its original memory location. Mutable Objects are efficient for frequent modifications. Since they don’t create new copies when altered, they save memory and reduce the overhead.
+Mutable objects are objects that can be modified after creation without changing their identity. Examples: list, dict, set. In memory, when you modify a mutable object, the object retains its original memory location. Mutable Objects are efficient for frequent modifications. Since they don’t create new copies when altered, they save memory and reduce the overhead. 
 Example: Appending multiple items to a list.
-Immutable objects are objects that cannot be altered once created. Examples: int, float, str, tuple. In memory, modifying an immutable object results in the creation of a new object with a different memory location. Immutable Objects are Safer and simpler to use when you need to ensure that the data won’t change, such as using keys in a dictionary.
-Example: Tuples used as dictionary keys.
-Reference Counting and Garbage Collection
-•	Python uses reference counting and garbage collection to manage memory.
-•	For mutable objects, since modifications don't lead to new objects, reference counts don't frequently change.
-•	For immutable objects, frequent creation and deletion can trigger garbage collection more often, especially in memory-intensive applications.
-
+Immutable objects are objects that cannot be altered once created. Examples: int, float, str, tuple. In memory, modifying an immutable object results in the creation of a new object with a different memory location. Immutable Objects are Safer and simpler to use when you need to ensure that the data won’t change, such as using keys in a dictionary. 
+Example: Tuples used as dictionary keys 
+Reference Counting and Garbage Collection 
+- Python uses reference counting and garbage collection to manage memory. 
+- For mutable objects, since modifications don't lead to new objects, reference counts don't frequently change.
+- For immutable objects, frequent creation and deletion can trigger garbage collection more often, especially in memory-intensive applications.
