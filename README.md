@@ -1,4 +1,5 @@
 # PythonPractice
+"""
 1.	Data Types:
 Numeric Types:
 •	int: Integer values, e.g., 42
@@ -91,3 +92,5 @@ Reference Counting and Garbage Collection
 •	Python uses reference counting and garbage collection to manage memory.
 •	For mutable objects, since modifications don't lead to new objects, reference counts don't frequently change.
 •	For immutable objects, frequent creation and deletion can trigger garbage collection more often, especially in memory-intensive applications.
+"""
+
