@@ -1,5 +1,5 @@
 # Day 1
-1.	Data Types:
+## Data Types:
 ### Numeric Types:
 - int: Integer values, e.g., 42
 - float: Floating-point values, e.g., 3.14
@@ -93,3 +93,30 @@ Reference Counting and Garbage Collection
 - Python uses reference counting and garbage collection to manage memory. 
 - For mutable objects, since modifications don't lead to new objects, reference counts don't frequently change.
 - For immutable objects, frequent creation and deletion can trigger garbage collection more often, especially in memory-intensive applications.
+
+# Day 2
+## Genrators:
+Generators are a type of iterable, like lists or tuples. However, unlike lists, they don't store their contents in memory. Instead, they generate values on the fly and yield them one at a time.
+1. Generator Functions: These are functions that use the yield keyword to return values one at a time. Each time the function is called, it resumes execution from where it left off.
+2. Generator Expressions: These are similar to list comprehensions but use parentheses instead of square brackets. They provide a concise way to create generators.
+### Benefits of Generators
+- Memory Efficiency: Generators are memory-efficient because they generate values on the fly and don't store the entire sequence in memory.
+Lazy Evaluation: Generators use lazy evaluation, meaning they only compute values when needed. This can lead to performance improvements, especially with large datasets.
+- Infinite Sequences: Generators can represent infinite sequences, which is not possible with lists.
+### Use Cases
+- Reading Large Files: Generators can be used to read large files line by line without loading the entire file into memory.
+- Data Streams: Generators are useful for processing data streams where you don't know the total size of the data in advance.
+## Decorators
+Decorators in Python are a powerful and elegant way to modify the behavior of functions or classes. They allow you to wrap another function or method in order to extend or alter its behavior without permanently modifying it. Here's a breakdown of the concept: Decorators are functions that take another function as an argument and extend or modify its behavior. They are often used for logging, access control, memoization, and more.
+- Memoization is a programming technique used to optimize the performance of functions by caching their results. When a function is called with a particular set of arguments, the result is stored in a cache. If the function is called again with the same arguments, the cached result is returned instead of recomputing it. This can significantly speed up programs, especially those with expensive or repetitive computations.
+1. Basic Decorator: A simple decorator that prints a message before and after the execution of a function.
+2. Decorator with Arguments: A decorator that accepts arguments.
+3. Class Decorators: Decorators can also be applied to classes.
+### Benefits of Decorators
+- Code Reusability: Decorators allow you to reuse code across multiple functions or methods.
+- Separation of Concerns: They help separate the core logic of a function from its auxiliary functionalities.
+- Readability: Decorators can make your code more readable and expressive.
+### Common Use Cases
+- Logging: Automatically log function calls and their results.
+- Access Control: Restrict access to certain functions based on user roles.
+- Memoization: Cache the results of expensive function calls to improve performance.
